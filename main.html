@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo-Mobile-app</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="inddex.css">
+</head>
+<body class="bg-[#f4f5f7] h-[1100px]">
+ <!-- maine commone divation <===>???????? -->
+  <div class="main-div max-w-[450px] mx-auto min-h-[50px] p-3.5 bg-white rounded-b-2xl">
+    
+<!-- Navegation bar starder div <=====> ???? -->
+<div class="  flex justify-between items-center  border-b-2 border-gray-400 p-4"> 
+  <div class="flex">
+    <img src="assets/Group.png" alt="" class="h-12">
+
+    <div class="ml-3">
+      <h2 class="text-[#080808] font-extrabold text-[18px]">$ <span id="abelavel-balince">45000</span> </h2>
+      <p class="text-[16px] text-[#08080880]">Available Balance</p>
+    </div>
+  </div>
+<div>
+  <button class="btn  text-[#08080880] text-[14px]"> <span><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i></span> Log Out</button>
+</div>
+</div>
+<div class=" p-5">
+  <h2 class="text-[#080808] text-[24px] font-semibold"> <span>🔥</span> Welcome to Payooo!</h2>
+  <p class="text-[#08080880] text-[16px ] ">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+</div>
+<!-- navegation bar over div <====>////// -->
+
+<!-- card prentes div =======???<> <>==== <===> -->
+<div class=" grid grid-cols-3  h-[196px] mx-auto ml-5 items-center cursor-pointer">
+  <!-- card over prents div == <part-1> -->
+  <!-- card section 1 ===> -->
+  <div id="add-money" class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+    <img src="assets/wallet1.png" class="mx-auto w-[23px] h-[23px]">
+    <h2 class="text-[14px] text-[#08080880] mt-2">Add Money</h2>
+  </div>
+  <!-- over card section 1 <=== -->
+   <!-- card section 2 -->
+
+  <div id="cash-out" class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+    <img src="assets/send1.png" class="mx-auto w-[23px] h-[23px]">
+    <h2 class="text-[14px] text-[#08080880] mt-2">Cash out</h2>
+  </div>
+  <!-- over card section 2 <=== -->
+
+   <!-- card section 3 -->
+  <div class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+    <img src="assets/money1.png" class="mx-auto w-[23px] h-[23px]">
+    <h2 class="text-[14px] text-[#08080880] mt-2">MoneyTransfer</h2>
+  </div>
+  <!-- over card section 3<=== -->
+
+  <!--  card section 4<=== -->
+  <div class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+    <img src="assets/bonus1.png" class="mx-auto w-[23px] h-[23px]">
+    <h2 class="text-[14px] text-[#08080880] mt-2">Get Bonus</h2>
+  </div>
+  <!-- over card section 4<=== -->
+
+  <!--  card section 5<=== -->
+
+  <div class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+    <img src="assets/purse1.png" class="mx-auto w-[23px] h-[23px]">
+    <h2 class="text-[14px] text-[#08080880] mt-2">Pay Bill</h2>
+  </div>
+  <!-- over card section 5<=== -->
+
+  <!--  card section 6<=== -->
+  <div class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+    <img src="assets/transaction1.png" class="mx-auto w-[23px] h-[23px]">
+    <h2 class="text-[14px] text-[#08080880] mt-2">Transactions</h2>
+  </div>
+  <!-- over card section 6<=== -->
+
+<!-- card prentes div over <2>=====<parts>=== -->
+</div>
+  <!-- card prentes div over <2>=====<parts>=== -->
+  </div>
+  <!-- maine div over <++++++++++====++++>////// -->
+<!-- footer-form div starder here >=====< -->
+    
+ <div class="from-tag max-w-[450px] h-[550px] mx-auto mt-10 p-12 bg-white
+  rounded-2xl shadow-md 
+
+ ">
+ <div id="add-money-prente-div" style="display: none;">
+
+ <h2 class="font-semibold text-[#080808] text-[18px] mb-3 ">Add money</h2>
+
+ <!-- Add mony-->
+  <from class=" p-7 ">
+    <!-- Select A Bank -->
+    <div>
+      <h6 class="font-medium text-[16px] ">Select A Bank</h6>
+      <select id="selet-bank" class="select rounded-3xl w-[350px] h-[53px] bg-gray-100">
+  <option class="font-light text-[16px] w-[350px] h-[53px] " disabled selected>Select your Bank</option>
+  <option>State Bank of India</option>
+  <option>Punjab National Bank</option>
+  <option>Bandhan Bank</option>
+  <option>bank of Broda</option>
+  <option>Indian Bank</option>
+  <option> Bank of India</option>
+  <option> Central Bank of India</option>
+</select>
+    </div>
+    <!-- Bank Account Number -->
+    <div>
+      <h6 class="font-medium text-[16px]">Bank Account Number</h6>
+      <input  id="account-number" type="text"  placeholder="Enter 11 digit account number" class="input rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
+    </div>
+    <!-- Amount to Add -->
+    <div>
+      <h6 class="font-medium text-[16px]">Amount to Add</h6>
+      <input id="withdraw" type="text" placeholder="Add Amount to withdraw" class="input
+      rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
+    </div>
+    <!-- Pin Number -->
+    <div>
+      <h6 class="font-medium text-[16px]">Pin Number</h6>
+      <input id="pin-number" type="text" placeholder="Enter 4 digit pin number" class="input
+      rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
+    </div>
+    <!-- button-bank-from(Add Money) -->
+    <div>
+      
+         <button id="add-mony-btn" class="btn btn-primary w-[350px] mt-7 h-[53px] bg-[#0874F2] border-none rounded-3xl
+      ">Add Money</button>
+     
+    </div>
+  </from>
+  </div>
+
+  <!-- Cash Out  -->
+   <div id="cash-out-parente-div" style="display: none;">
+    <h2 class="font-semibold text-[#080808] text-[18px] mb-3 ">Cash Out</h2>
+   </div>
+ </div> 
+
+ 
+ 
+    
+
+
+
+
+ <!-- Scriting for div testing >=====<-->
+<script>
+  document.getElementById("add-money").addEventListener("click",
+    function(){
+      document.getElementById("cash-out-parente-div").style.display = "none"
+      document.getElementById("add-money-prente-div").style.display  = "block"
+    }
+  )
+  document.getElementById("cash-out").addEventListener("click",function(){
+    document.getElementById("add-money-prente-div").style.display = "none";
+    document.getElementById("cash-out-parente-div").style.display= "block";
+  })
+
+</script>
+<!-- over scripting<======> -->
+
+<script src="app-main.js"></script>
+
+</body>
+</html>
