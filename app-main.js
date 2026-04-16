@@ -1,4 +1,5 @@
-
+// tranjection data
+const tranjectionData = []
 
 // button tag add elemints
 
@@ -14,12 +15,43 @@ document.getElementById("add-mony-btn").addEventListener("click",
 
             const totalBalince = addMony + abelavelBalince;
             document.getElementById("abelavel-balince").innerText= totalBalince;
-          
 
+            // darta
+            const data = {
+              name:"Add money",
+              date: new Date().toLocaleTimeString(),
 
-       
+            }
+            tranjectionData.push(data)
+            console.log(tranjectionData)   
     }
 )
+
+document.getElementById("tarmjection-btn").addEventListener("click",function(){
+  const tranjectionCard = document.getElementById("card-tranject")
+  for(const Data of tranjectionData){
+    const div = document.createElement("div")
+    div.innerHTML`
+   <div class="w-[400px] h-[70px] bg-white border-2 border-gray-100 shadow-md rounded-2xl p-3 flex justify-between">
+          <div class="flex items-center">
+            <div class=" p-3 rounded-full bg-gray-200">
+              <img src="assets/wallet1.png" class="mx-auto w-[23px] h-[23px]">
+            </div>
+           <div class="p-1 ml-1.5">
+             <p class="font-semibold text-[16px] text-[#08080880]">${data.name}</p>
+             <p class="text-[12px] text-[#08080880] ">${data.date}</p>
+           </div>
+          </div>
+          <i class="fa-solid fa-ellipsis rotate-90 w-[25px] h-[25px] mt-1.5 text-[#08080880] "></i>
+        </div>
+
+
+    `
+
+
+    tranjectionCard.appendChild(div);
+  }
+})
 
 // withdraw Button function 
 document.getElementById("withdraw-btn").addEventListener("click",function(e){
@@ -29,6 +61,14 @@ document.getElementById("withdraw-btn").addEventListener("click",function(e){
     const abelaveLBalince = parseInt(document.getElementById("abelavel-balince").innerText);
    const totalMinace =  abelaveLBalince- amountValue;
    document.getElementById("abelavel-balince").innerText = totalMinace;
+
+   const data = {
+              name:"Withdrawal",
+              date: new Date().toLocaleTimeString(),
+
+            }
+            tranjectionData.push(data)
+          
 
 })
 
@@ -40,6 +80,14 @@ e.preventDefault()
   const amounT = parseInt(document.getElementById("amount-to-pay").value);
   const totalValue = abavelBlanceToPay - amounT;
   document.getElementById("abelavel-balince").innerText = totalValue;
+
+  const data = {
+              name:"Send money",
+              date: new Date().toLocaleTimeString(),
+
+            }
+            tranjectionData.push(data)
+          
  
 })
 // Pay Bill button Function ====><======>
@@ -49,6 +97,14 @@ e.preventDefault()
     const abelaveLBalince = parseInt( document.getElementById("abelavel-balince").innerText);
     const totalBillpy = abelaveLBalince - payBillAmont;
     document.getElementById("abelavel-balince").innerText = totalBillpy;
+
+    const data = {
+              name:"Pay billing",
+              date: new Date().toLocaleTimeString(),
+
+            }
+            tranjectionData.push(data)
+          
 
  } )
 
@@ -62,6 +118,7 @@ e.preventDefault()
       document.getElementById("cash-out-parente-div").style.display = "none"
        document.getElementById("transfer-money-parent-div").style.display = "none"
        document.getElementById("get-bouns-main-div").style.display = "none"
+       document.getElementById("tranjections-main-div").style.display = "none"
       document.getElementById("add-money-prente-div").style.display  = "block"
 
       
@@ -87,6 +144,7 @@ e.preventDefault()
      document.getElementById("transfer-money-parent-div").style.display = "none"
       document.getElementById("main-Pay-bill-div").style.display = "none"
         document.getElementById("get-bouns-main-div").style.display = "none"
+        document.getElementById("tranjections-main-div").style.display = "none"
     document.getElementById("cash-out-parente-div").style.display= "block";
 
     // btn function 
@@ -107,6 +165,7 @@ document.getElementById("cash-out").classList.remove("border-gray-400")
     document.getElementById("cash-out-parente-div").style.display = "none"
      document.getElementById("main-Pay-bill-div").style.display = "none"
        document.getElementById("get-bouns-main-div").style.display = "none"
+       document.getElementById("tranjections-main-div").style.display = "none"
     document.getElementById("transfer-money-parent-div").style.display = "block"
     // btn function 
     const tranfer = document.getElementsByClassName("from-btn")
@@ -125,6 +184,7 @@ document.getElementById("cash-out").classList.remove("border-gray-400")
     document.getElementById("cash-out-parente-div").style.display = "none"
     document.getElementById("transfer-money-parent-div").style.display = "none"
       document.getElementById("get-bouns-main-div").style.display = "none"
+      document.getElementById("tranjections-main-div").style.display = "none"
     document.getElementById("main-Pay-bill-div").style.display = "block"
     // btn function 
     const pyBills  = document.getElementsByClassName("from-btn")
@@ -144,6 +204,7 @@ document.getElementById("cash-out").classList.remove("border-gray-400")
     document.getElementById("cash-out-parente-div").style.display = "none"
     document.getElementById("transfer-money-parent-div").style.display = "none"
     document.getElementById("main-Pay-bill-div").style.display = "none"
+    document.getElementById("tranjections-main-div").style.display = "none"
     document.getElementById("get-bouns-main-div").style.display = "block"
     // btn Function 
     const getBonus = document.getElementsByClassName("from-btn")
@@ -154,6 +215,30 @@ document.getElementById("cash-out").classList.remove("border-gray-400")
     document.getElementById("get-bouns").classList.remove("border-gray-400")
     document.getElementById("get-bouns").classList.add("border-[#0874f2]","bg-[#0874f20d]")
   })
+
+  // tranjection toggling Function here<=====>
+    document.getElementById("tarmjection-btn").addEventListener("click",function(){
+      document.getElementById("add-money-prente-div").style.display = "none"
+    document.getElementById("cash-out-parente-div").style.display = "none"
+    document.getElementById("transfer-money-parent-div").style.display = "none"
+    document.getElementById("main-Pay-bill-div").style.display = "none"
+    document.getElementById("get-bouns-main-div").style.display = "none"
+    document.getElementById("tranjections-main-div").style.display = "block"
+
+     // toggling btn 
+    const tranjecBtns = document.getElementsByClassName("from-btn")
+    for(const btn of tranjecBtns){
+      btn.classList.remove("border-[#0874f2]","bg-[#0874f20d]")
+      btn.classList.add("border-gray-400")
+    }
+
+    document.getElementById("tarmjection-btn").classList.add("border-[#0874f2]","bg-[#0874f20d]")
+    document.getElementById("tarmjection-btn").classList.remove("border-gray-400")
+    
+
+    })
+   
+    
 
 
 // toggling functin over here>======<
