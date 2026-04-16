@@ -59,7 +59,7 @@
   <!-- over card section 3<=== -->
 
   <!--  card section 4<=== -->
-  <div class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+  <div id="get-bouns" class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
     <img src="assets/bonus1.png" class="mx-auto w-[23px] h-[23px]">
     <h2 class="text-[14px] text-[#08080880] mt-2">Get Bonus</h2>
   </div>
@@ -67,7 +67,7 @@
 
   <!--  card section 5<=== -->
 
-  <div class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
+  <div id="pay-bills-div" class="border-2 border-gray-400 w-[123px] h-[90px] rounded-2xl text-center p-4">
     <img src="assets/purse1.png" class="mx-auto w-[23px] h-[23px]">
     <h2 class="text-[14px] text-[#08080880] mt-2">Pay Bill</h2>
   </div>
@@ -154,7 +154,7 @@
     <!-- Amount to Add -->
     <div>
       <h6 class="font-medium text-[16px]">Amount</h6>
-      <input  type="text" placeholder="Enter amount to withdraw" class="input
+      <input id="amount-value"  type="text" placeholder="Enter amount to withdraw" class="input
       rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
     </div>
     <!-- Pin Number -->
@@ -166,7 +166,7 @@
     <!-- button-bank-from(Add Money) -->
     <div>
       
-         <button  class="btn btn-primary w-[350px] mt-9  h-[53px] bg-[#0874F2] border-none rounded-3xl
+         <button id="withdraw-btn"  class="btn btn-primary w-[350px] mt-9  h-[53px] bg-[#0874F2] border-none rounded-3xl
       ">Withdraw Money</button>
      
     </div>
@@ -211,6 +211,74 @@
 
 
    </div>
+   <!-- Get Bonus div here -->
+    <div id="get-bouns-main-div" style="display: none;"  class="my-auto">
+      <h2 class="font-semibold text-[#080808] text-[18px] mb-3 ">Get Bonus</h2>
+        <from class=" p-9 ">
+    <div>
+      <h6 class="font-medium text-[16px]">Enter Bonus Coupon</h6>
+      <input type="text" placeholder="Enter your coupon" class="input
+      rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
+    </div>
+    <!-- button-bank-from(Add Money) -->
+    <div>
+      
+         <button  class="btn btn-primary w-[350px] mt-9  h-[53px] bg-[#0874F2] border-none rounded-3xl
+      ">Get Bonus</button>
+     
+    </div>
+  </from>
+
+    </div>
+    <!-- Get Bonus div over here -->
+
+    <!-- Pay Bill div here -->
+      <div id="main-Pay-bill-div" style="display: none;">
+        <h2 class="font-semibold text-[#080808] text-[18px] mb-3 ">Pay Bill</h2>
+ <from class=" p-7 ">
+    <!-- Select A Bank -->
+    <div>
+      <h6 class="font-medium text-[16px] ">Select To Pay</h6>
+      <select  class="select rounded-3xl w-[350px] h-[53px] bg-gray-100">
+  <option class="font-light text-[16px] w-[350px] h-[53px] " disabled selected>Select back</option>
+  <option>State Bank of India</option>
+  <option>Punjab National Bank</option>
+  <option>Bandhan Bank</option>
+  <option>bank of Broda</option>
+  <option>Indian Bank</option>
+  <option> Bank of India</option>
+  <option> Central Bank of India</option>
+</select>
+    </div>
+    <!-- Bank Account Number -->
+    <div>
+      <h6 class="font-medium text-[16px]">Biller Account Number</h6>
+      <input   type="text"  placeholder="Enter account number" class="input rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
+    </div>
+    <!-- Amount to Add -->
+    <div>
+      <h6 class="font-medium text-[16px]">Amount to Pay</h6>
+      <input  type="text" placeholder="Add Amount to pay" class="input
+      rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
+    </div>
+    <!-- Pin Number -->
+    <div>
+      <h6 class="font-medium text-[16px]">Pin Number</h6>
+      <input  type="text" placeholder="Enter 4 digit pin number" class="input
+      rounded-3xl w-[350px] h-[53px] bg-gray-100"/>
+    </div>
+    <!-- button-bank-from(Add Money) -->
+    <div>
+      
+         <button  class="btn btn-primary w-[350px] mt-7 h-[53px] bg-[#0874F2] border-none rounded-3xl
+      ">Pay Now</button>
+     
+    </div>
+  </from>
+
+
+      </div>
+     <!-- Pay Bill div over here -->
  </div> 
 
  
@@ -222,26 +290,6 @@
 
  <!-- Scriting for div testing >=====<-->
 <script>
-  document.getElementById("add-money").addEventListener("click",
-    function(){
-      document.getElementById("cash-out-parente-div").style.display = "none"
-       document.getElementById("transfer-money-parent-div").style.display = "none"
-      document.getElementById("add-money-prente-div").style.display  = "block"
-    }
-  )
-  document.getElementById("cash-out").addEventListener("click",function(){
-    document.getElementById("add-money-prente-div").style.display = "none";
-     document.getElementById("transfer-money-parent-div").style.display = "none"
-    document.getElementById("cash-out-parente-div").style.display= "block";
-  })
-
-  document.getElementById("Money-transfer").addEventListener("click",function(){
-    document.getElementById("add-money-prente-div").style.display = "none"
-    document.getElementById("cash-out-parente-div").style.display = "none"
-    document.getElementById("transfer-money-parent-div").style.display = "block"
-
-  })
-
 </script>
 <!-- over scripting<======> -->
 
